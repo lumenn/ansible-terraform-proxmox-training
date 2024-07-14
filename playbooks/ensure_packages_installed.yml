@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: "Ensure podman, and zsh is installed."
+      apt: 
+        update_cache: true
+        name: 
+          - podman 
+          - zsh
+        state: present
